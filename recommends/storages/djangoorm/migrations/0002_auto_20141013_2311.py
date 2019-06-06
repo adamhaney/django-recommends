@@ -15,16 +15,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='recommendation',
             name='object_ctype',
-            field=models.ForeignKey(to='contenttypes.ContentType'),
+            field=models.ForeignKey(to='contenttypes.ContentType', on_delete=models.CASCADE),
         ),
         migrations.AlterField(
             model_name='similarity',
             name='object_ctype',
-            field=models.ForeignKey(to='contenttypes.ContentType'),
+            field=models.ForeignKey(to='contenttypes.ContentType', on_delete=models.CASCADE),
         ),
         migrations.AlterField(
             model_name='similarity',
             name='related_object_ctype',
-            field=models.ForeignKey(related_name='similar', to='contenttypes.ContentType'),
+            field=models.ForeignKey(related_name='similar', to='contenttypes.ContentType', on_delete=models.CASCADE),
         ),
     ]
